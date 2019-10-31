@@ -306,11 +306,11 @@ var BackEndService = /** @class */ (function () {
         var _this = this;
         //return this.lugares;
         // return this.afdb.list('productosbackend/');
-        var url = '//206.189.238.132/getproducts.php';
+        var url = 'http://206.189.238.132/getproducts.php';
         return this.http.get(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) { return _this.log('fetch Producto'); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError('BuscarProductos', [])));
     };
     BackEndService.prototype.BuscarClientes = function () {
-        var url = '//206.189.238.132/getclients.php';
+        var url = 'http://206.189.238.132/getclients.php';
         return this.http.get(url);
     };
     BackEndService.prototype.handleError = function (operation, result) {
